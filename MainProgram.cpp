@@ -352,7 +352,7 @@ int bSearchTreeType<T>::treeNodeCount() const {
 
     // TODO: return nodeCount(root)
 
-    return 0;
+    return nodeCount(root);
 
 }
  
@@ -368,13 +368,7 @@ int bSearchTreeType<T>::nodeCount(nodeType<T>* p) const {
 
     // else => 1 + nodeCount(left) + nodeCount(right)
 
-    else{
-
-        1 + nodeCount(p -> llink) + nodeCount(p -> rlink);
-
-    }
-
-    return 0;
+        return 1 + nodeCount(p -> llink) + nodeCount(p -> rlink);
 
 }
  
@@ -392,7 +386,7 @@ int bSearchTreeType<T>::treeLeavesCount() const {
 
     // TODO: return leavesCount(root)
 
-    return 0;
+    return leavesCount(root);
 
 }
  
@@ -416,13 +410,7 @@ int bSearchTreeType<T>::leavesCount(nodeType<T>* p) const {
 
     }
 
-    else{
-
-        return leavesCount(p->llink) + leavesCount(p->rlink);
-
-    }
-
-    return 0;
+     return leavesCount(p->llink) + leavesCount(p->rlink);
 
 }
  
@@ -480,4 +468,7 @@ int main() {
 
 }
  
+ 
+ 
+
 
